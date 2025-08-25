@@ -1,10 +1,18 @@
 import { useNavigate } from "react-router-dom";
 import { useGetAllSubmissionsQuery } from "../../../../store/features/submissions/api";
-import {
-  AssesmentStatusEnum,
-  SubmissionStatusEnum,
-} from "../../../../../../backend/types";
+
 import { getRowIcon } from "../utils";
+export const AssesmentStatusEnum = {
+  PENDING: "pending",
+  PUBLISHED: "published",
+  COMPLETED: "completed",
+  CANCELLED: "cancelled",
+};
+export const SubmissionStatusEnum = {
+  SUBMITTED: "submitted", // when the user has submitted and we are checking
+  IN_PROGRESS: "in_progress", // when the user has started the assesment
+  COMPLETED: "completed", // when the user has completed the assesment and we have checked the answers
+};
 
 export const useSubmissionsData = () => {
   const navigate = useNavigate();
