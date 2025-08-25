@@ -38,11 +38,32 @@ npm run dev
 - `npm run lint`: Run ESLint
 
 ### <img src="public/logo/quizzy_logo.png" alt="" height="16" style="vertical-align:middle; margin-right:6px;" /> Environment Configuration
-The API base URL defaults to `http://localhost:3000/api` via `src/constants/api/index.js`:
+The frontend selects the API base URL in this order:
+1. `VITE_API_URL` (from `.env`)
+2. If running on `localhost`/`127.0.0.1`: `http://localhost:3000/api`
+3. Otherwise: `https://quizzy-the-ai-powered-app-backend.onrender.com/api`
+
+Implementation:
 ```javascript
-export const BASE_URL = "http://localhost:3000/api";
+const getDefaultBaseUrl = () => {
+  const isBrowser = typeof window !== "undefined";
+  const hostname = isBrowser ? window.location.hostname : "";
+  const isLocal = hostname === "localhost" || hostname === "127.0.0.1";
+  return isLocal
+    ? "http://localhost:3000/api"
+    : "https://quizzy-the-ai-powered-app-backend.onrender.com/api";
+};
+
+export const BASE_URL = (import.meta.env.VITE_API_URL?.trim()) || getDefaultBaseUrl();
 ```
-To target a different backend, update `BASE_URL` or refactor to read from an environment variable, e.g. `import.meta.env.VITE_API_URL`.
+
+Set a local override by creating `.env` in the `frontend/` folder:
+```bash
+# .env
+VITE_API_URL=http://localhost:3000/api
+```
+
+Deployed backend (default): [`https://quizzy-the-ai-powered-app-backend.onrender.com`](https://quizzy-the-ai-powered-app-backend.onrender.com)
 
 ### <img src="public/logo/quizzy_logo.png" alt="" height="16" style="vertical-align:middle; margin-right:6px;" /> Project Structure
 Key directories and files:
