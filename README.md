@@ -6,7 +6,7 @@
 
 A modern React + Vite frontend for the AI‑powered Quizzy platform. It provides student and teacher experiences for creating templates, generating assessments with AI, taking assessments, and reviewing submissions with helpful breakdowns and metrics.
 
-### Tech Stack
+### <img src="public/logo/quizzy_logo.png" alt="" height="16" style="vertical-align:middle; margin-right:6px;" /> Tech Stack
 - **Framework**: React 19, React Router 7
 - **State**: Redux Toolkit, React‑Redux
 - **Build**: Vite 6
@@ -14,12 +14,12 @@ A modern React + Vite frontend for the AI‑powered Quizzy platform. It provides
 - **UI/UX**: Tippy.js tooltips, Lucide icons, React Markdown
 - **Linting**: ESLint 9
 
-### Requirements
+### <img src="public/logo/quizzy_logo.png" alt="" height="16" style="vertical-align:middle; margin-right:6px;" /> Requirements
 - Node.js 18+ (LTS recommended)
 - pnpm, npm, or yarn (examples below use npm)
 - Backend API running locally at `http://localhost:3000/api` (configurable)
 
-### Getting Started
+### <img src="public/logo/quizzy_logo.png" alt="" height="16" style="vertical-align:middle; margin-right:6px;" /> Getting Started
 1. Install dependencies:
 ```bash
 npm install
@@ -31,20 +31,20 @@ npm run dev
 3. Open the app:
 - Vite will print a local URL (typically `http://localhost:5173`).
 
-### Available Scripts
+### <img src="public/logo/quizzy_logo.png" alt="" height="16" style="vertical-align:middle; margin-right:6px;" /> Available Scripts
 - `npm run dev`: Start Vite dev server
 - `npm run build`: Production build
 - `npm run preview`: Preview the production build locally
 - `npm run lint`: Run ESLint
 
-### Environment Configuration
+### <img src="public/logo/quizzy_logo.png" alt="" height="16" style="vertical-align:middle; margin-right:6px;" /> Environment Configuration
 The API base URL defaults to `http://localhost:3000/api` via `src/constants/api/index.js`:
 ```javascript
 export const BASE_URL = "http://localhost:3000/api";
 ```
 To target a different backend, update `BASE_URL` or refactor to read from an environment variable, e.g. `import.meta.env.VITE_API_URL`.
 
-### Project Structure
+### <img src="public/logo/quizzy_logo.png" alt="" height="16" style="vertical-align:middle; margin-right:6px;" /> Project Structure
 Key directories and files:
 - `src/main.jsx`: App bootstrap with Redux store provider
 - `src/App.jsx`: Top‑level routes and lazy‑loading
@@ -55,7 +55,7 @@ Key directories and files:
 - `src/constants/`: API endpoints and shared constants
 - `src/utils/`: Utility helpers (formatting, calculations)
 
-### Routing
+### <img src="public/logo/quizzy_logo.png" alt="" height="16" style="vertical-align:middle; margin-right:6px;" /> Routing
 Routing is configured with React Router and lazy loading:
 ```jsx
 // src/App.jsx
@@ -66,7 +66,7 @@ Routing is configured with React Router and lazy loading:
 ```
 - `teacherRoutes` and `studentRoutes` provide feature routes under their respective layouts.
 
-### State Management
+### <img src="public/logo/quizzy_logo.png" alt="" height="16" style="vertical-align:middle; margin-right:6px;" /> State Management
 - Uses Redux Toolkit slices under `src/store/features/` for:
   - `assesments` (create, fetch, take, submit)
   - `template` (create templates, manage question types)
@@ -74,11 +74,11 @@ Routing is configured with React Router and lazy loading:
   - `common` (layout, sidebar state)
 - Actions and selectors are organized by feature for clarity and scalability.
 
-### Styling
+### <img src="public/logo/quizzy_logo.png" alt="" height="16" style="vertical-align:middle; margin-right:6px;" /> Styling
 - Tailwind CSS v4 is configured via the Vite Tailwind plugin.
 - Global styles live in `src/index.css`.
 
-### API
+### <img src="public/logo/quizzy_logo.png" alt="" height="16" style="vertical-align:middle; margin-right:6px;" /> API
 - Base exports in `src/constants/api/index.js`:
   - `BASE_URL`
   - Template APIs: `templates.js`
@@ -86,12 +86,12 @@ Routing is configured with React Router and lazy loading:
   - Submission APIs: `submissions.js`
 - The frontend expects the backend to expose routes under `/api`.
 
-### Development Tips
+### <img src="public/logo/quizzy_logo.png" alt="" height="16" style="vertical-align:middle; margin-right:6px;" /> Development Tips
 - Prefer lazy‑loading pages to keep initial bundles small.
 - Keep UI elements in `components/common` and domain UIs under feature folders.
 - Use selectors from `store/features/*/selectors` to keep components lean.
 
-### Production Build
+### <img src="public/logo/quizzy_logo.png" alt="" height="16" style="vertical-align:middle; margin-right:6px;" /> Production Build
 Create an optimized build:
 ```bash
 npm run build
@@ -102,15 +102,15 @@ npm run preview
 ```
 Deploy the contents of `dist/` to your static host (e.g., Netlify, Vercel, S3 + CloudFront).
 
-### Customization
+### <img src="public/logo/quizzy_logo.png" alt="" height="16" style="vertical-align:middle; margin-right:6px;" /> Customization
 - **API URL**: Change `BASE_URL` or switch to `VITE_API_URL` env var.
 - **Branding**: Replace assets in `public/logo/`.
 - **Navigation**: Adjust `src/routes/studentRoutes.js` and `src/routes/teacherRoutes.js`.
 
-### Troubleshooting
+### <img src="public/logo/quizzy_logo.png" alt="" height="16" style="vertical-align:middle; margin-right:6px;" /> Troubleshooting
 - Port in use: change the Vite dev port via `vite --port 5174` or Vite config.
 - CORS errors: ensure the backend enables CORS for the frontend origin.
 - Blank page after build: verify correct base path in hosting and no mixed‑content issues.
 
-### License
+### <img src="public/logo/quizzy_logo.png" alt="" height="16" style="vertical-align:middle; margin-right:6px;" /> License
 This frontend is part of the Quizzy project. See the repository root `README.md` for overall licensing and contribution guidelines.
