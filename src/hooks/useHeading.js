@@ -4,7 +4,9 @@ import { useDispatch } from "react-redux";
 import { setCommonKey } from "../store/features/common/commonSlice";
 
 export const useHeading = () => {
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
+     const dispatch = useDispatch();
+
   const { heading, subheading } = useSelector(commonSelector);
 
   const setHeading = (value) => {
