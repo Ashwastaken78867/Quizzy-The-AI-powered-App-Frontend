@@ -4,7 +4,7 @@
 
 ## Quizzy Frontend
 
-A modern React + Vite frontend for the AI‑powered Quizzy platform. It provides student and teacher experiences for creating templates, generating assessments with AI, taking assessments, and reviewing submissions with helpful breakdowns and metrics.
+A modern React + Vite frontend for the AI‑powered Quizzy platform. It provides student and teacher experiences for creating templates, generating assessments with AI, taking assessments, and reviewing submissions with helpful breakdowns and metric.
 
 ### <img src="public/logo/quizzy_logo.png" alt="" height="16" style="vertical-align:middle; margin-right:6px;" /> Tech Stack
 - **Framework**: React 19, React Router 7
