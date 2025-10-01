@@ -11,7 +11,7 @@ A modern React + Vite frontend for the AI‑powered Quizzy platform. It provides
 - **State**: Redux Toolkit, React‑Redux
 - **Build**: Vite 6
 - **Styling**: Tailwind CSS 4
-- **UI/UX**: Tippy.js tooltips, Lucide icons, React Markdown
+- **UI/UX**: Tippy.js tooltip, Lucide icons, React Markdown
 - **Linting**: ESLint 9
 
 ### <img src="public/logo/quizzy_logo.png" alt="" height="16" style="vertical-align:middle; margin-right:6px;" /> Requirements
