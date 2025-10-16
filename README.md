@@ -35,7 +35,7 @@ npm run dev
 - `npm run dev`: Start Vite dev server
 - `npm run build`: Production build
 - `npm run preview`: Preview the production build locally
-- `npm run lint`: Run ESLint
+- `npm run lint`: Ru ESLint
 
 ### <img src="public/logo/quizzy_logo.png" alt="" height="16" style="vertical-align:middle; margin-right:6px;" /> Environment Configuration
 The frontend selects the API base URL in this order:
